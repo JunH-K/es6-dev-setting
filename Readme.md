@@ -1,4 +1,5 @@
-#자바스크립트 ES6 개발 환경 구축
+설치모듈
+
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
     "@babel/polyfill": "^7.7.0",
@@ -9,6 +10,7 @@
     "webpack-dev-server": "^3.9.0"
 
 목표
+
 ES6 코드 작성→babel, webpack→ 한개 js
 
 > babel
