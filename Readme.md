@@ -1,7 +1,8 @@
 ##자바스크립트 es6 개발환경 구축
 > 사용법
+~~~
 git clone https://github.com/kdeveloper87/es6-dev-environment.git folderName
-
+~~~
 ~~~
 npm install
 ~~~
