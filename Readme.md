@@ -1,6 +1,16 @@
 ##자바스크립트 es6 개발환경 구축
+> 사용법
+git clone https://github.com/kdeveloper87/es6-dev-environment.git folderName
 
-설치모듈
+~~~
+npm install
+~~~
+~~~
+npm run dev
+~~~
+
+
+> 설치모듈
 
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
@@ -207,33 +217,35 @@ npm run dev
     }
 
 > webpack.config.js
-
-    const path = require('path');
-    
-    module.exports = {
-      entry: ['@babel/polyfill', './src/js/index.js'],
-      output: {
-        path: path.resolve(__dirname, 'dist/js'),
-        filename: 'bundle.js'
-      },
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            include: [
-              path.resolve(__dirname, 'src/js')
-            ],
-            exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: ['@babel/preset-env'],
-              }
-            }
-          }
-        ]
-      },
-      devtool: 'source-map',
-      // https://webpack.js.org/concepts/mode/#mode-development
-      mode: 'development'
-    };
+~~~
+   const path = require('path');
+   
+   module.exports = {
+     entry: ['@babel/polyfill', './src/js/index.js'],
+     output: {
+       path: path.resolve(__dirname, 'dist/js'),
+       publicPath: '/dist/js',
+       filename: 'bundle.js'
+     },
+     module: {
+       rules: [
+         {
+           test: /\.js$/,
+           include: [
+             path.resolve(__dirname, 'src/js')
+           ],
+           exclude: /node_modules/,
+           use: {
+             loader: 'babel-loader',
+             options: {
+               presets: ['@babel/preset-env'],
+             }
+           }
+         }
+       ]
+     },
+     devtool: 'source-map',
+     // https://webpack.js.org/concepts/mode/#mode-development
+     mode: 'development'
+   };
+~~~
