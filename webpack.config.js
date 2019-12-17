@@ -1,11 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  entry: ['@babel/polyfill', './src/js/index.js'],
+  entry:  './src/js/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
-    publicPath: '/dist/js',
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist',
+    filename: 'bundle.js',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
