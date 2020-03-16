@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env, options) => {
   if ( options.mode === 'production' ){
-    config.plugins = [new CleanWebpackPlugin()];
+    config.plugins = [...config.plugins,new CleanWebpackPlugin()];
   }
   return config;
 };
@@ -14,7 +14,7 @@ const config = {
   output: {
     path: path.resolve( __dirname, 'dist' ),
     publicPath: 'dist/',
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
     libraryTarget: 'umd',
   },
   module: {
