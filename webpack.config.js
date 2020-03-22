@@ -13,7 +13,7 @@ const config = {
   entry: './src/js/index.js',
   output: {
     path: path.resolve( __dirname, 'dist' ),
-    publicPath: 'dist/',
+    // publicPath: 'dist/',
     filename: '[name].[hash].js',
     libraryTarget: 'umd',
   },
